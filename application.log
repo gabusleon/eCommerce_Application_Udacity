@@ -1,0 +1,419 @@
+2022-01-08 18:50:29.524 ERROR 27975 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:249) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:225) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:208) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:177) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:342) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:318) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:266) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:228) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:201) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.example.demo.SareetaApplication.main(SareetaApplication.java:22) ~[classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:177) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:98) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:90) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:65) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:58) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:304) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:448) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:388) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:303) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:261) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 18 common frames omitted
+
+2022-01-08 18:52:17.378 ERROR 28154 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:249) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:225) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:208) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:177) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:342) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:318) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:266) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:228) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:201) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.example.demo.SareetaApplication.main(SareetaApplication.java:22) ~[classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:177) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:98) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:90) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:65) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:58) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:304) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:448) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:388) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:303) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:261) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 18 common frames omitted
+
+2022-01-08 18:52:52.898 ERROR 28204 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:249) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:225) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:208) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:177) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:342) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:318) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:266) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:228) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:201) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.example.demo.SareetaApplication.main(SareetaApplication.java:22) ~[classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:177) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:98) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:90) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:65) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:58) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:304) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:448) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:388) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:303) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:261) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 18 common frames omitted
+
+2022-01-08 18:53:08.623  INFO 28230 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 28230 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 18:53:08.625  INFO 28230 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 18:53:09.140  INFO 28230 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 18:53:09.203  INFO 28230 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 4 repository interfaces.
+2022-01-08 18:53:09.634  INFO 28230 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$186ae2e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 18:53:09.882  INFO 28230 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 18:53:09.903  INFO 28230 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 18:53:09.903  INFO 28230 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 18:53:10.000  INFO 28230 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 18:53:10.000  INFO 28230 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1325 ms
+2022-01-08 18:53:10.150  INFO 28230 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-08 18:53:10.289  INFO 28230 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-08 18:53:10.335  INFO 28230 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-08 18:53:10.403  INFO 28230 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-08 18:53:10.404  INFO 28230 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-08 18:53:10.546  INFO 28230 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-08 18:53:10.667  INFO 28230 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-08 18:53:11.292  INFO 28230 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 18:53:11.810  WARN 28230 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-08 18:53:11.865  INFO 28230 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ae87e38, org.springframework.security.web.context.SecurityContextPersistenceFilter@63ad5fe7, org.springframework.security.web.header.HeaderWriterFilter@5aeebccc, org.springframework.web.filter.CorsFilter@44e4cf8a, org.springframework.security.web.authentication.logout.LogoutFilter@b87ea8b, com.example.demo.security.JWTAuthenticationFilter@50930bff, com.example.demo.security.JWTAuthenticationVerficationFilter@296bfddb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495bc9e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36d39655, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@508b4f70, org.springframework.security.web.session.SessionManagementFilter@6fe243a, org.springframework.security.web.access.ExceptionTranslationFilter@36349e29, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cc817bd]
+2022-01-08 18:53:11.950  INFO 28230 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-08 18:53:12.100  INFO 28230 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-08 18:53:12.102  INFO 28230 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 3.78 seconds (JVM running for 4.077)
+2022-01-08 18:53:24.337  INFO 28230 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-08 18:53:24.337  INFO 28230 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-08 18:53:24.343  INFO 28230 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-01-08 18:53:24.429  INFO 28230 --- [http-nio-8080-exec-2] c.e.demo.controllers.UserController      : Username set with: gabus
+2022-01-08 19:03:39.674  INFO 28230 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:03:39.681  INFO 28230 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:03:39.701  INFO 28230 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-08 19:03:39.708  INFO 28230 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-08 19:03:42.904  INFO 29068 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 29068 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 19:03:42.906  INFO 29068 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 19:03:43.428  INFO 29068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 19:03:43.496  INFO 29068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 4 repository interfaces.
+2022-01-08 19:03:43.976  INFO 29068 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa9237d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 19:03:44.283  INFO 29068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 19:03:44.306  INFO 29068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 19:03:44.306  INFO 29068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 19:03:44.435  INFO 29068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 19:03:44.435  INFO 29068 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1479 ms
+2022-01-08 19:03:44.445 ERROR 29068 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'JWTAuthenticationVerficationFilter' defined in file [/Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master/starter_code/target/classes/com/example/demo/security/JWTAuthenticationVerficationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.authentication.AuthenticationManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-01-08 19:03:44.473  INFO 29068 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-01-08 19:03:44.481  WARN 29068 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-01-08 19:03:44.490  INFO 29068 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-08 19:03:44.592 ERROR 29068 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.demo.security.JWTAuthenticationVerficationFilter required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+2022-01-08 19:05:08.386  INFO 29176 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 29176 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 19:05:08.387  INFO 29176 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 19:05:09.030  INFO 29176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 19:05:09.130  INFO 29176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90ms. Found 4 repository interfaces.
+2022-01-08 19:05:09.695  INFO 29176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$693de737] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 19:05:09.943  INFO 29176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 19:05:09.967  INFO 29176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 19:05:09.968  INFO 29176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 19:05:10.081  INFO 29176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 19:05:10.081  INFO 29176 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1648 ms
+2022-01-08 19:05:10.249  INFO 29176 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-08 19:05:10.420  INFO 29176 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-08 19:05:10.479  INFO 29176 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-08 19:05:10.549  INFO 29176 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-08 19:05:10.551  INFO 29176 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-08 19:05:10.696  INFO 29176 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-08 19:05:10.818  INFO 29176 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-08 19:05:11.496  INFO 29176 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:05:12.114  WARN 29176 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-08 19:05:12.197  INFO 29176 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f2dc407, org.springframework.security.web.context.SecurityContextPersistenceFilter@77f04d1a, org.springframework.security.web.header.HeaderWriterFilter@2560a7be, org.springframework.web.filter.CorsFilter@c96c497, org.springframework.security.web.authentication.logout.LogoutFilter@e4bb10b, com.example.demo.security.JWTAuthenticationFilter@6e337ba1, com.example.demo.security.JWTAuthenticationVerficationFilter@53a16dd6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fb70301, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@594c66c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@126d8659, org.springframework.security.web.session.SessionManagementFilter@59aa2fba, org.springframework.security.web.access.ExceptionTranslationFilter@26be0d23, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32f14274]
+2022-01-08 19:05:12.297  INFO 29176 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:05:12.492  INFO 29176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-08 19:05:12.498  INFO 29176 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 4.468 seconds (JVM running for 4.86)
+2022-01-08 19:05:16.809  INFO 29176 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-08 19:05:16.810  INFO 29176 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-08 19:05:16.819  INFO 29176 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-01-08 19:09:32.403  INFO 29176 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:09:32.406  INFO 29176 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:09:32.414  INFO 29176 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-08 19:09:32.417  INFO 29176 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-08 19:09:35.621  INFO 29544 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 29544 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 19:09:35.623  INFO 29544 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 19:09:36.166  INFO 29544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 19:09:36.230  INFO 29544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+2022-01-08 19:09:36.696  INFO 29544 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e17f63ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 19:09:36.977  INFO 29544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 19:09:37.000  INFO 29544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 19:09:37.000  INFO 29544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 19:09:37.101  INFO 29544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 19:09:37.102  INFO 29544 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1435 ms
+2022-01-08 19:09:37.241  INFO 29544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-08 19:09:37.383  INFO 29544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-08 19:09:37.427  INFO 29544 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-08 19:09:37.489  INFO 29544 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-08 19:09:37.495  INFO 29544 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-08 19:09:37.625  INFO 29544 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-08 19:09:37.741  INFO 29544 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-08 19:09:38.402  INFO 29544 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:09:38.863  WARN 29544 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-08 19:09:38.918  INFO 29544 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@735167e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@3791af, org.springframework.security.web.header.HeaderWriterFilter@37f71e8, org.springframework.web.filter.CorsFilter@67689c81, org.springframework.security.web.authentication.logout.LogoutFilter@6afaf27, com.example.demo.security.JWTAuthenticationFilter@21a0795f, com.example.demo.security.JWTAuthenticationVerficationFilter@2ec156fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@308be1a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5265a8dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56d742ad, org.springframework.security.web.session.SessionManagementFilter@397dfbe8, org.springframework.security.web.access.ExceptionTranslationFilter@b5390, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24668b5b]
+2022-01-08 19:09:38.999  INFO 29544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:09:39.143  INFO 29544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-08 19:09:39.145  INFO 29544 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 4.035 seconds (JVM running for 4.423)
+2022-01-08 19:09:55.179  INFO 29544 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-08 19:09:55.180  INFO 29544 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-08 19:09:55.188  INFO 29544 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-01-08 19:09:55.297  INFO 29544 --- [http-nio-8080-exec-1] c.e.demo.controllers.UserController      : Username set with: gabus
+2022-01-08 19:10:32.185  INFO 29544 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:10:32.187  INFO 29544 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:10:32.190  INFO 29544 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-08 19:10:32.196  INFO 29544 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-08 19:10:35.103  INFO 29626 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 29626 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 19:10:35.105  INFO 29626 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 19:10:35.923  INFO 29626 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 19:10:36.003  INFO 29626 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 4 repository interfaces.
+2022-01-08 19:10:36.494  INFO 29626 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d9b57744] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 19:10:36.749  INFO 29626 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 19:10:36.778  INFO 29626 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 19:10:36.778  INFO 29626 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 19:10:36.898  INFO 29626 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 19:10:36.899  INFO 29626 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1735 ms
+2022-01-08 19:10:37.050  INFO 29626 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-08 19:10:37.189  INFO 29626 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-08 19:10:37.232  INFO 29626 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-08 19:10:37.303  INFO 29626 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-08 19:10:37.305  INFO 29626 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-08 19:10:37.461  INFO 29626 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-08 19:10:37.599  INFO 29626 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-08 19:10:38.342  INFO 29626 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:10:38.919  WARN 29626 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-08 19:10:39.002  INFO 29626 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fdb1a59, org.springframework.security.web.context.SecurityContextPersistenceFilter@259aec72, org.springframework.security.web.header.HeaderWriterFilter@79fc4e99, org.springframework.web.filter.CorsFilter@55c341d0, org.springframework.security.web.authentication.logout.LogoutFilter@37f71e8, com.example.demo.security.JWTAuthenticationFilter@348bd063, com.example.demo.security.JWTAuthenticationVerficationFilter@3d73cd78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26be0d23, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fb70301, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@acd115d, org.springframework.security.web.session.SessionManagementFilter@6c7f804c, org.springframework.security.web.access.ExceptionTranslationFilter@51da7b08, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42fa5cb]
+2022-01-08 19:10:39.118  INFO 29626 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:10:39.294  INFO 29626 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-08 19:10:39.296  INFO 29626 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 4.563 seconds (JVM running for 4.937)
+2022-01-08 19:10:43.157  INFO 29626 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-08 19:10:43.157  INFO 29626 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-08 19:10:43.163  INFO 29626 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-01-08 19:11:25.772  INFO 29626 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:11:25.775  INFO 29626 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:11:25.781  INFO 29626 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-08 19:11:25.783  INFO 29626 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-08 19:11:28.750  INFO 29716 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 29716 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 19:11:28.753  INFO 29716 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 19:11:29.479  INFO 29716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 19:11:29.573  INFO 29716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 4 repository interfaces.
+2022-01-08 19:11:30.272  INFO 29716 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b7a0e778] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 19:11:30.591  INFO 29716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 19:11:30.622  INFO 29716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 19:11:30.623  INFO 29716 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 19:11:30.766  INFO 29716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 19:11:30.766  INFO 29716 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1963 ms
+2022-01-08 19:11:30.980  INFO 29716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-08 19:11:31.176  INFO 29716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-08 19:11:31.242  INFO 29716 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-08 19:11:31.320  INFO 29716 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-08 19:11:31.322  INFO 29716 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-08 19:11:31.512  INFO 29716 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-08 19:11:31.789  INFO 29716 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-08 19:11:32.847  INFO 29716 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:11:33.615  WARN 29716 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-08 19:11:33.695  INFO 29716 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b9fea11, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f22fd5d, org.springframework.security.web.header.HeaderWriterFilter@94aeba1, org.springframework.web.filter.CorsFilter@c7cf8c4, org.springframework.security.web.authentication.logout.LogoutFilter@2a60981c, com.example.demo.security.JWTAuthenticationFilter@56e78538, com.example.demo.security.JWTAuthenticationVerficationFilter@731fae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e7f29d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10b3ea72, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@438a2d3, org.springframework.security.web.session.SessionManagementFilter@ff8e36d, org.springframework.security.web.access.ExceptionTranslationFilter@14d298d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@526fc044]
+2022-01-08 19:11:33.805  INFO 29716 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:11:34.052  INFO 29716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-08 19:11:34.055  INFO 29716 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 5.654 seconds (JVM running for 6.051)
+2022-01-08 19:11:37.518  INFO 29716 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-08 19:11:37.519  INFO 29716 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-08 19:11:37.530  INFO 29716 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2022-01-08 19:11:37.584  INFO 29716 --- [http-nio-8080-exec-1] c.e.demo.controllers.OrderController     : Find order with username: gabus
+2022-01-08 19:11:37.624  INFO 29716 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-01-08 19:11:41.488  INFO 29716 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : Username set with: gabus
+2022-01-08 19:11:46.194  INFO 29716 --- [http-nio-8080-exec-4] c.e.demo.controllers.OrderController     : Find order with username: gabus
+2022-01-08 19:12:47.196  INFO 29716 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:12:47.200  INFO 29716 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:12:47.206  INFO 29716 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-08 19:12:47.208  INFO 29716 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-08 19:12:50.524  INFO 29836 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 29836 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 19:12:50.526  INFO 29836 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 19:12:51.180  INFO 29836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 19:12:51.279  INFO 29836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 4 repository interfaces.
+2022-01-08 19:12:51.899  INFO 29836 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dc40e96f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 19:12:52.237  INFO 29836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 19:12:52.271  INFO 29836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 19:12:52.272  INFO 29836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 19:12:52.421  INFO 29836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 19:12:52.422  INFO 29836 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1841 ms
+2022-01-08 19:12:52.627  INFO 29836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-08 19:12:52.805  INFO 29836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-08 19:12:52.871  INFO 29836 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-08 19:12:52.950  INFO 29836 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-08 19:12:52.952  INFO 29836 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-08 19:12:53.159  INFO 29836 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-08 19:12:53.312  INFO 29836 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-08 19:12:54.148  INFO 29836 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:12:54.971  WARN 29836 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-08 19:12:55.070  INFO 29836 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42fa5cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@14293540, org.springframework.security.web.header.HeaderWriterFilter@7057dbda, org.springframework.web.filter.CorsFilter@3ae87e38, org.springframework.security.web.authentication.logout.LogoutFilter@1f1574c, com.example.demo.security.JWTAuthenticationFilter@44e4cf8a, com.example.demo.security.JWTAuthenticationVerficationFilter@50930bff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c8a9266, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c7f804c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@296bfddb, org.springframework.security.web.session.SessionManagementFilter@183a508b, org.springframework.security.web.access.ExceptionTranslationFilter@2a60981c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70e54ec3]
+2022-01-08 19:12:55.219  INFO 29836 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:12:55.450  INFO 29836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-08 19:12:55.451  INFO 29836 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 5.415 seconds (JVM running for 5.78)
+2022-01-08 19:13:03.886  INFO 29836 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-08 19:13:03.886  INFO 29836 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-08 19:13:03.893  INFO 29836 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-01-08 19:13:03.975  INFO 29836 --- [http-nio-8080-exec-2] c.e.demo.controllers.UserController      : Username set with: gabus
+2022-01-08 19:13:12.119  INFO 29836 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-01-08 19:13:12.243  INFO 29836 --- [http-nio-8080-exec-3] c.e.demo.controllers.CartController      : Add to cart of usename: gabus
+2022-01-08 19:13:18.650  INFO 29836 --- [http-nio-8080-exec-4] c.e.demo.controllers.OrderController     : Find order with username: gabus
+2022-01-08 19:13:31.786  INFO 29836 --- [http-nio-8080-exec-5] c.e.demo.controllers.UserController      : Username set with: gabus2
+2022-01-08 19:13:54.586  INFO 29836 --- [http-nio-8080-exec-6] c.e.demo.controllers.CartController      : Add to cart of usename: gabus2
+2022-01-08 19:13:58.576  INFO 29836 --- [http-nio-8080-exec-7] c.e.demo.controllers.CartController      : Add to cart of usename: gabus2
+2022-01-08 19:14:11.645  INFO 29836 --- [http-nio-8080-exec-8] c.e.demo.controllers.OrderController     : Find order with username: gabus2
+2022-01-08 19:14:18.794  INFO 29836 --- [http-nio-8080-exec-9] c.e.demo.controllers.UserController      : Username set with: gabus3
+2022-01-08 19:14:22.192  INFO 29836 --- [http-nio-8080-exec-10] c.e.demo.controllers.UserController      : Username set with: gabus4
+2022-01-08 19:14:26.632  INFO 29836 --- [http-nio-8080-exec-1] c.e.demo.controllers.UserController      : Username set with: gabus5
+2022-01-08 19:14:35.519  INFO 29836 --- [http-nio-8080-exec-2] c.e.demo.controllers.CartController      : Add to cart of usename: gabus3
+2022-01-08 19:14:40.738  INFO 29836 --- [http-nio-8080-exec-3] c.e.demo.controllers.CartController      : Add to cart of usename: gabus4
+2022-01-08 19:14:45.905  INFO 29836 --- [http-nio-8080-exec-4] c.e.demo.controllers.CartController      : Add to cart of usename: gabus5
+2022-01-08 19:14:50.923  INFO 29836 --- [http-nio-8080-exec-5] c.e.demo.controllers.OrderController     : Find order with username: gabus3
+2022-01-08 19:14:53.959  INFO 29836 --- [http-nio-8080-exec-6] c.e.demo.controllers.OrderController     : Find order with username: gabus4
+2022-01-08 19:14:56.996  INFO 29836 --- [http-nio-8080-exec-7] c.e.demo.controllers.OrderController     : Find order with username: gabus5
+2022-01-08 19:15:02.511  INFO 29836 --- [http-nio-8080-exec-8] c.e.demo.controllers.OrderController     : Find order with username: gabus10
+2022-01-08 19:15:13.906  INFO 29836 --- [http-nio-8080-exec-9] c.e.demo.controllers.UserController      : Username set with: gabus5
+2022-01-08 19:19:37.734  INFO 29836 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:19:37.736  INFO 29836 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:19:37.742  INFO 29836 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-08 19:19:37.745  INFO 29836 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-08 19:19:41.289  INFO 30372 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on MacBook-Pro.local with PID 30372 (started by Gabus in /Users/Gabus/Documents/Java Web Developer Nanodegree/projects/nd035-c4-Security-and-DevOps-master)
+2022-01-08 19:19:41.292  INFO 30372 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-08 19:19:41.809  INFO 30372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-08 19:19:41.877  INFO 30372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 4 repository interfaces.
+2022-01-08 19:19:42.581  INFO 30372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f22d6438] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-08 19:19:42.872  INFO 30372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-08 19:19:42.898  INFO 30372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-08 19:19:42.898  INFO 30372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-08 19:19:43.027  INFO 30372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-08 19:19:43.028  INFO 30372 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1683 ms
+2022-01-08 19:19:43.211  INFO 30372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-08 19:19:43.355  INFO 30372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-08 19:19:43.407  INFO 30372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-08 19:19:43.474  INFO 30372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-08 19:19:43.476  INFO 30372 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-08 19:19:43.659  INFO 30372 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-08 19:19:43.805  INFO 30372 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-08 19:19:44.597  INFO 30372 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-08 19:19:45.174  WARN 30372 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-08 19:19:45.244  INFO 30372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e54e900, org.springframework.security.web.context.SecurityContextPersistenceFilter@20a9fb01, org.springframework.security.web.header.HeaderWriterFilter@767b9d66, org.springframework.web.filter.CorsFilter@7c8689e, org.springframework.security.web.authentication.logout.LogoutFilter@2078bf0a, com.example.demo.security.JWTAuthenticationFilter@3da61af2, com.example.demo.security.JWTAuthenticationVerficationFilter@7852ab30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d5de79a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e23ba17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@417751d3, org.springframework.security.web.session.SessionManagementFilter@266a47fd, org.springframework.security.web.access.ExceptionTranslationFilter@22f057b4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5740ad76]
+2022-01-08 19:19:45.372  INFO 30372 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-08 19:19:45.578  INFO 30372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-08 19:19:45.580  INFO 30372 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 4.947 seconds (JVM running for 5.468)
+2022-01-08 19:20:03.323  INFO 30372 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-08 19:20:03.323  INFO 30372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-08 19:20:03.331  INFO 30372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-01-08 19:20:03.417  INFO 30372 --- [http-nio-8080-exec-1] c.e.demo.controllers.UserController      : Username set with: gabus1
+2022-01-08 19:20:08.093  INFO 30372 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : Username set with: gabus1
+2022-01-08 19:20:08.095  INFO 30372 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : Cannot create user set with: gabus1
+2022-01-08 19:20:20.399  INFO 30372 --- [http-nio-8080-exec-5] c.e.demo.controllers.UserController      : Username set with: gabus2
+2022-01-08 19:20:23.829  INFO 30372 --- [http-nio-8080-exec-6] c.e.demo.controllers.UserController      : Username set with: gabus3
+2022-01-08 19:20:27.375  INFO 30372 --- [http-nio-8080-exec-7] c.e.demo.controllers.UserController      : Username set with: gabus4
+2022-01-08 19:20:32.110  INFO 30372 --- [http-nio-8080-exec-8] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-01-08 19:20:38.307  INFO 30372 --- [http-nio-8080-exec-9] c.e.demo.controllers.CartController      : Add to cart of usename: gabus1
+2022-01-08 19:20:43.303  INFO 30372 --- [http-nio-8080-exec-10] c.e.demo.controllers.CartController      : Add to cart of usename: gabus1
+2022-01-08 19:20:49.227  INFO 30372 --- [http-nio-8080-exec-2] c.e.demo.controllers.CartController      : Add to cart of usename: gabus1
+2022-01-08 19:20:55.391  INFO 30372 --- [http-nio-8080-exec-1] c.e.demo.controllers.OrderController     : Find order with username: gabus10
+2022-01-08 19:20:55.392  INFO 30372 --- [http-nio-8080-exec-1] c.e.demo.controllers.OrderController     : Couldnt find order with username: gabus10
+2022-01-08 19:20:58.278  INFO 30372 --- [http-nio-8080-exec-3] c.e.demo.controllers.OrderController     : Find order with username: gabus10
+2022-01-08 19:20:58.280  INFO 30372 --- [http-nio-8080-exec-3] c.e.demo.controllers.OrderController     : Couldnt find order with username: gabus10
+2022-01-08 19:20:58.843  INFO 30372 --- [http-nio-8080-exec-4] c.e.demo.controllers.OrderController     : Find order with username: gabus10
+2022-01-08 19:20:58.845  INFO 30372 --- [http-nio-8080-exec-4] c.e.demo.controllers.OrderController     : Couldnt find order with username: gabus10
+2022-01-08 19:20:59.354  INFO 30372 --- [http-nio-8080-exec-5] c.e.demo.controllers.OrderController     : Find order with username: gabus10
+2022-01-08 19:20:59.356  INFO 30372 --- [http-nio-8080-exec-5] c.e.demo.controllers.OrderController     : Couldnt find order with username: gabus10
+2022-01-08 19:21:01.747  INFO 30372 --- [http-nio-8080-exec-6] c.e.demo.controllers.OrderController     : Find order with username: gabus1
+2022-01-08 19:21:10.677  INFO 30372 --- [http-nio-8080-exec-7] c.e.demo.controllers.CartController      : Add to cart of usename: gabus2
+2022-01-08 19:21:16.118  INFO 30372 --- [http-nio-8080-exec-8] c.e.demo.controllers.OrderController     : Find order with username: gabus2
+2022-01-08 19:21:18.747  INFO 30372 --- [http-nio-8080-exec-9] c.e.demo.controllers.OrderController     : Find order with username: gabus3
+2022-01-08 19:21:24.230  INFO 30372 --- [http-nio-8080-exec-10] c.e.demo.controllers.CartController      : Add to cart of usename: gabus2
+2022-01-08 19:21:30.966  INFO 30372 --- [http-nio-8080-exec-2] c.e.demo.controllers.CartController      : Add to cart of usename: gabus2
+2022-01-08 19:21:34.952  INFO 30372 --- [http-nio-8080-exec-1] c.e.demo.controllers.OrderController     : Find order with username: gabus2
+2022-01-08 19:21:42.701  INFO 30372 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : Username set with: gabus6

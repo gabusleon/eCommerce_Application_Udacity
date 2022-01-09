@@ -41,10 +41,10 @@ public class CartController {
 		if(user == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-		log.info("Add to cart of usename:", request.getUsername());
+		log.info("Add to cart of usename: {}", request.getUsername());
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			log.debug("Item not found:", item.toString());
+			log.debug("Item not found: {}", item.toString());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
@@ -60,11 +60,11 @@ public class CartController {
 		if(user == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-		log.info("Remove item from cart of usename:", request.getUsername());
-		log.info("Remove item from cart: ", request.getItemId());
+		log.info("Remove item from cart of usename: {}", request.getUsername());
+		log.info("Remove item from cart: {}", request.getItemId());
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			log.debug("Item not found:", item.toString());
+			log.error("Item not found: {}", item.toString());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();

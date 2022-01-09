@@ -40,26 +40,31 @@ public class UserController {
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
-		log.info("Username send with:", username);
+		log.info("Username send with: {}", username);
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
 	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
-		User user = new User();
-		user.setUsername(createUserRequest.getUsername());
-		log.info("Username set with:", createUserRequest.getUsername());
-		Cart cart = new Cart();
-		cart.setUser(user);
-		cartRepository.save(cart);
-		user.setCart(cart);
-		if(createUserRequest.getPassword().length() < 7 ||
-			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+		try {
+			User user = new User();
+			user.setUsername(createUserRequest.getUsername());
+			log.info("Username set with: {}", createUserRequest.getUsername());
+			Cart cart = new Cart();
+			cartRepository.save(cart);
+			user.setCart(cart);
+			if (createUserRequest.getPassword().length() < 7 ||
+					!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+				log.info("Cannot create user set with: {}", createUserRequest.getUsername());
+				return ResponseEntity.badRequest().build();
+			}
+			user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+			userRepository.save(user);
+			return ResponseEntity.ok(user);
+		}catch(Exception ex){
+			log.info("Cannot create user set with: {}", createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
-		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
-		userRepository.save(user);
-		return ResponseEntity.ok(user);
 	}
 	
 }
